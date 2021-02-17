@@ -1,0 +1,14 @@
+h1{
+    background-color: blue;
+    font-family:Lucida Sansf;
+    border-radius: 25%;
+    margin-block-start: 5%;
+    text-align: center;
+    color: cornsilk;
+}
+#form{
+    text-align: center;
+    border:solid blue;
+    border-radius: 5%;
+    margin: 20px auto;
+}

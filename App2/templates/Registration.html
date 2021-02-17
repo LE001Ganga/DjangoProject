@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form clas="form-control" method="POST" action="#" enctype="multipart/form-data">
+    <div class="form-group col-md-2">
+        {% csrf_token %}
+        <label>
+            UserName:<input type="text" class="form-control mt-2" placeholder="Enter userName" name="uname"/>
+    </label>
+    <label>
+        PassWord:<input type="password" class="form-control mt-2" placeholder="Enter password" name="pwsd"/>
+    </label>
+    <label>
+        Email:<input type="email" class="form-control mt-2" placeholder="Enter email address" name="email"/>
+    </label>
+    <label>
+        Image:<input type="file" class="form-control mt-2" placeholder="Select Image from device" name="image"/>
+    </label>
+    <button class="btn btn-primary" type="submit">
+        Register
+    </button>
+    </div>
+    
+</form>
+
+{% endblock %}

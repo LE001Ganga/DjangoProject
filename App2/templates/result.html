@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-xs-10">
+            <table border="5" style="text-align: center;">
+                <tr>
+                    <th>FirstName</th>
+                    <th>RollNo</th>
+                    <th>Mail-ID</th>
+                    <th>PhoneNo</th>
+                    <th>Address</th>
+                    <th>DOB</th>
+                    <th>Gender</th>
+                </tr>
+                
+                    {% for i in data %}
+                    <tr>
+                        <td>{{i.FullName}}</td>
+                        <td>{{i.RollNo}}</td>
+                        <td>{{i.EmailId}}</td>
+                        <td>{{i.MobileNo}}</td>
+                        <td>{{i.Address}}</td>
+                        <td>{{i.Date_Of_Birth}}</td>
+                        <td>{{i.Gender}}</td>
+                        <td><a class="btn btn-primary" href={%url 'update' i.id%}>update</a></td>
+                        <td><a class="btn btn-primary" href={%url 'delete' i.id%}>delete</a></td>
+                    </tr>
+                   {% endfor %}
+                
+                
+
+         
+                   
+               
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

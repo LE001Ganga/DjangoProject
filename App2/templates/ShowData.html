@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-xs-10">
+            <table border=none style="text-align: center;">
+                <thead>
+                    <tr>
+                        <th>USERNAME:</th>
+                        <th>PASSWORD</th>
+                        <th>MAIL-ID</th>
+                        <th>IMAGE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in objs %}
+                        <tr>
+                            <td>{{i.Username}}</td>
+                            <td>{{i.Password}}</td>
+                            <td>{{i.Email}}</td>
+                            <td><img src=/images/{{i.Image}} style="width:100px;height:100px;" alt="image"></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+{% endblock %}

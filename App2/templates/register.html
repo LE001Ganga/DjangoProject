@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %} 
+    
+    <center> <h1> Student Registeration Form </h1> </center>  
+    <form method="POST" action="#" class="form-control"> 
+        {% csrf_token %}
+        <label> FullName   
+            <input type="text" name="FullName" size="15" class="form-control" required />
+        </label>
+        <label> RollNo:   
+            <input type="text" name="RollNo"  class="form-control" size="15" required />   
+        </label>
+        <label for="email">Email
+            <input type="text"  name="EmailId" class="form-control" required>
+        </label>  
+        <label>Phone :  
+            <input type="text" name="MobileNo" class="form-control" size="10"/ required>
+        </label>
+       <label> Current Address : 
+            <textarea cols="80" rows="5" name="Address" placeholder="Current Address" value="address" required>  
+            </textarea>
+       </label>   
+        <label>DateOFBirth:
+           <input type="date" name="Date_Of_Birth"/>
+        </label>
+        <div>
+            <label>Gender : </label>  
+            <input type="radio" value="Male" name="Gender" checked > Male   
+            <input type="radio" value="Female" name="Gender"> Female    
+        </div>
+        
+        <button type="submit" class="registerbtn">Register</button>    
+    </form>  
+{% endblock %}

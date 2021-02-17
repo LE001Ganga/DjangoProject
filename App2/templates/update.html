@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %} 
+    
+    <form method="POST" action="#"> 
+        {% csrf_token %} 
+      <div class="container">  
+      <center>  <h1> Student Registeration Form</h1> </center>  
+      <hr>  
+      <label> FullName </label>   
+    <input type="text" name="FullName" placeholder= "FullName" size="15" value={{data.FullName}} required />   
+    <label> RollNo: </label>   
+    <input type="text" name="RollNo" placeholder="RollNo" value={{data.RollNo}} size="15" required />   
+      
+    <label for="email"><b>Email</b></label>  
+     <input type="text" placeholder="Enter Email" name="EmailId" value={{data.EmailId}} required>
+     <label>   
+        Phone :  
+    </label>   
+        <input type="text" name="MobileNo" placeholder="phone no." value={{data.MobileNo}} size="10"/ required>
+        Current Address :  
+    <textarea cols="80" rows="5" name="Address" placeholder="Current Address" value={{data.Address}} required>  
+    </textarea>
+    <label>
+        DateOFBirth:<input type="date" name="Date_Of_Birth" value={{data.Date_Of_Birth}}/>
+    </label>
+    <div>  
+    <label>   
+    Gender :  
+    </label><br>  
+    <input type="radio" value="Male" name="Gender" > {% if data.Gender == 'Male' %}check{% endif %}Male   
+    <input type="radio" value="Female" name="Gender"> {% if data.Gender == 'Female' %}check {% endif %}Female   
+      
+    </div>  
+    <button type="submit" class="registerbtn">Register</button>    
+    </form>  
+{% endblock %}
